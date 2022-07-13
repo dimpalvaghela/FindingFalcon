@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Finding Falcone!</string>
+    <string name="_weight_one">1</string>
+    <string name="planet_destination_one">Destination 1</string>
+    <string name="planet_destination_two">Destination 2</string>
+    <string name="planet_destination_three">Destination 3</string>
+    <string name="planet_destination_four">Destination 4</string>
+    <string name="str_select_planet_you_want_to_search_in">Select planets you want to search in:</string>
+
+    <string-array name="planet_name">
+        <item>DONLON</item>
+        <item>ENCHAI</item>
+        <item>JEBING</item>
+        <item>SAPIR</item>
+        <item>LERBIN</item>
+        <item>PINGASOR</item>
+    </string-array>
+
+</resources>
