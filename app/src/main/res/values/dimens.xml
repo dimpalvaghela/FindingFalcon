@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="_5mdp">5.00dp</dimen>
+    <dimen name="_7mdp">7.00dp</dimen>
     <dimen name="_10mdp">10.00dp</dimen>
     <dimen name="_14mdp">14.00dp</dimen>
+    <dimen name="_15mdp">15.00dp</dimen>
+    <dimen name="_17mdp">17.00dp</dimen>
     <dimen name="_20mdp">20.00dp</dimen>
+    <dimen name="_25mdp">25.00dp</dimen>
     <dimen name="_30mdp">30.00dp</dimen>
+    <dimen name="_40mdp">40.00dp</dimen>
+    <dimen name="_50mdp">50.00dp</dimen>
+    <dimen name="_60mdp">60.00dp</dimen>
+    <dimen name="_120mdp">120.00dp</dimen>
+    <dimen name="_140mdp">140.00dp</dimen>
+    <!-- Button -->
+    <dimen name="buttonTextSize">@dimen/_8font_mdp</dimen>
+    <dimen name="buttonMinTextSize">@dimen/_14mdp</dimen>
+    <dimen name="bottomButtonHeight">@dimen/_40mdp</dimen>
+    <dimen name="bottomButtonWidth">@dimen/_140mdp</dimen>
+
+    <dimen name="_8font_mdp">12.00sp</dimen>
 
 </resources>

@@ -3,8 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/layout/activity_main.xml" value="0.1308876811594203" />
+        <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.135" />
+        <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/drawable/button_round.xml" value="0.1" />
+        <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/drawable/ic_baseline_reset.xml" value="0.135" />
+        <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/drawable/ic_button_ui_blue.xml" value="0.1" />
+        <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/drawable/ic_button_ui_blue_disable.xml" value="0.1" />
+        <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/drawable/layout_bg.xml" value="0.131" />
+        <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/layout/activity_find.xml" value="0.10416666666666667" />
+        <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/layout/activity_finding_falcone_solution.xml" value="0.1213768115942029" />
+        <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/layout/custom_spinner_item.xml" value="0.17552083333333332" />
         <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/layout/dropdown_menu.xml" value="0.1" />
+        <entry key="..\:/Dimpal/FEproblem1/app/src/main/res/menu/bottom_nav_menu.xml" value="0.17552083333333332" />
       </map>
     </option>
   </component>

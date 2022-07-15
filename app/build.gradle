@@ -49,21 +49,14 @@ android {
         // Add this debug config to provide debug settings
         debug {
             minifyEnabled false
-            buildConfigField("String", "API_URL_SAMEDIS", "\"https://dev.samedis.care\"")
-            buildConfigField("String", "API_VERSION1", "\"1\"")
-            buildConfigField("String", "API_VERSION2", "\"2\"")
-
-            buildConfigField("String", "BASE_URL", "\"https://dev.ident.services/api/v1/\"")
+            buildConfigField("String", "API_URL", "\"https://findfalcone.herokuapp.com\"")
+            buildConfigField("String", "BASE_URL", "\"https://findfalcone.herokuapp.com\"")
         }
         release {
             minifyEnabled true // to apply the proguard
             //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
-            buildConfigField("String", "API_URL_SAMEDIS", "\"https://dev.samedis.care\"")
-            buildConfigField("String", "API_VERSION1", "\"1\"")
-            buildConfigField("String", "API_VERSION2", "\"2\"")
-
-            buildConfigField("String", "BASE_URL", "\"https://dev.ident.services/api/v1/\"")
+            buildConfigField("String", "API_URL", "\"https://findfalcone.herokuapp.com\"")
+            buildConfigField("String", "BASE_URL", "\"https://findfalcone.herokuapp.com\"")
         }
     }
 
@@ -123,6 +116,9 @@ dependencies {
     implementation "androidx.room:room-ktx:$room_version"
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
 
+    // logger
+    implementation "com.jakewharton.timber:timber:$timber_version"
+
     // Networking
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
@@ -158,6 +154,9 @@ dependencies {
     //Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+
+    /*Paper Database*/
+    implementation 'io.paperdb:paperdb:2.7.1'
 
 
 }

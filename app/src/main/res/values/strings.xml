@@ -1,11 +1,16 @@
 <resources>
     <string name="app_name">Finding Falcone!</string>
     <string name="_weight_one">1</string>
+    <string name="str_none">none</string>
     <string name="planet_destination_one">Destination 1</string>
     <string name="planet_destination_two">Destination 2</string>
     <string name="planet_destination_three">Destination 3</string>
     <string name="planet_destination_four">Destination 4</string>
     <string name="str_select_planet_you_want_to_search_in">Select planets you want to search in:</string>
+    <string name="str_select_vehicle">Select Vehicle</string>
+    <string name="str_time_taken">Time taken:</string>
+    <string name="str_find_falcone">Find Falcone!</string>
+    <string name="str_reset">Reset</string>
 
     <string-array name="planet_name">
         <item>DONLON</item>
@@ -15,5 +20,19 @@
         <item>LERBIN</item>
         <item>PINGASOR</item>
     </string-array>
+
+    <!--Network-->
+    <string name="app_common_network_no_internet_connection">Internet connection not available </string>
+    <string name="app_common_network_internal_error">Our systems got an error, please retry again</string>
+    <string name="app_common_network_server_not_available">Our services are under maintenance, please retry after some time</string>
+    <string name="app_common_server_connection_error">Not able to connect, please retry again</string>
+    <string name="app_common_network_unknown_host_exception">Unable to resolve host.No address associated with hostname </string>
+    <string name="app_common_network_default_error">app_common_something_went_wrong</string>
+
+
+    <!--Screen Two String-->
+    <string name="str_success_message">Success! Congratulation on Finding Falcone. King Shan is mighty pleased </string>
+    <string name="str_planet_found">Planet found</string>
+    <string name="str_start_again">Start Again</string>
 
 </resources>
