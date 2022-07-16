@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <item
         android:id="@+id/btnNavReset"
-        android:icon="@drawable/ic_baseline_reset"
+        android:icon="@drawable/ic_reset"
         app:showAsAction="ifRoom"
         android:title="@string/str_reset" />
 </menu>

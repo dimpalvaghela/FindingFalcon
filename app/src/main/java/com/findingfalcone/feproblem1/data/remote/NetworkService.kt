@@ -20,7 +20,7 @@ interface NetworkService {
 
     @Headers("Accept: application/json", "Content-Type: application/json")
     @POST(Endpoints.FIND)
-    fun findPrinces(@Body body: FindApiRequest): Single<FindApiRequest>
+    fun findPrinces(@Body body: FindApiRequest): Single<FindFalconeSolutionResponse>
 
 
 

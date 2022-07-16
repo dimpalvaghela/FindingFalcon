@@ -30,7 +30,6 @@ class FalconeApplication : Application() {
         applicationComponent?.let {
             it.inject(this)
         }
-        LogUtils.displayELog("Tag", "SamedisApplication injectDependencies ")
     }
 
     fun clearComponent() {

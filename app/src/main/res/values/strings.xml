@@ -7,19 +7,16 @@
     <string name="planet_destination_three">Destination 3</string>
     <string name="planet_destination_four">Destination 4</string>
     <string name="str_select_planet_you_want_to_search_in">Select planets you want to search in:</string>
-    <string name="str_select_vehicle">Select Vehicle</string>
+    <string name="str_select_vehicle_one">Select Vehicle One</string>
+    <string name="str_select_vehicle_two">Select Vehicle Two</string>
+    <string name="str_select_vehicle_three">Select Vehicle Three</string>
+    <string name="str_select_vehicle_four">Select Vehicle Four</string>
     <string name="str_time_taken">Time taken:</string>
     <string name="str_find_falcone">Find Falcone!</string>
     <string name="str_reset">Reset</string>
-
-    <string-array name="planet_name">
-        <item>DONLON</item>
-        <item>ENCHAI</item>
-        <item>JEBING</item>
-        <item>SAPIR</item>
-        <item>LERBIN</item>
-        <item>PINGASOR</item>
-    </string-array>
+    <string name="str_list_of_vehicles">List of vehicles</string>
+    <string name="str_ok">Ok</string>
+    <string name="str_cancel">Cancel</string>
 
     <!--Network-->
     <string name="app_common_network_no_internet_connection">Internet connection not available </string>
@@ -27,12 +24,14 @@
     <string name="app_common_network_server_not_available">Our services are under maintenance, please retry after some time</string>
     <string name="app_common_server_connection_error">Not able to connect, please retry again</string>
     <string name="app_common_network_unknown_host_exception">Unable to resolve host.No address associated with hostname </string>
-    <string name="app_common_network_default_error">app_common_something_went_wrong</string>
+    <string name="app_common_network_default_error">Something went wrong!!</string>
 
 
     <!--Screen Two String-->
     <string name="str_success_message">Success! Congratulation on Finding Falcone. King Shan is mighty pleased </string>
+    <string name="str_failure_message">$04! Princes not found</string>
     <string name="str_planet_found">Planet found</string>
     <string name="str_start_again">Start Again</string>
+    <string name="str_planet_not_found">Planet not found</string>
 
 </resources>

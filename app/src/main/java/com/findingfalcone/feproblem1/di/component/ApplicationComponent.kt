@@ -4,7 +4,6 @@ import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import com.findingfalcone.feproblem1.FalconeApplication
-import com.findingfalcone.feproblem1.data.local.db.DatabaseService
 import com.findingfalcone.feproblem1.data.remote.NetworkService
 import com.findingfalcone.feproblem1.di.ApplicationContext
 import com.findingfalcone.feproblem1.di.ResourcesProvider
@@ -36,8 +35,6 @@ interface ApplicationComponent {
      * Also, in ActivityComponent you can find dependencies = [ApplicationComponent::class] to link this relationship
      */
     fun getNetworkService(): NetworkService
-
-    fun getDatabaseService(): DatabaseService
 
     fun getSharedPreferences(): SharedPreferences
 

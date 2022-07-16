@@ -3,6 +3,7 @@ package com.findingfalcone.feproblem1.di.component
 import com.findingfalcone.feproblem1.di.ActivityScope
 import com.findingfalcone.feproblem1.di.module.ActivityModule
 import com.findingfalcone.feproblem1.ui.module.FindQueenScreen.FindActivity
+import com.findingfalcone.feproblem1.ui.module.OutPutScreen.FindingFalconeSolutionActivity
 import dagger.Component
 
 @ActivityScope
@@ -13,6 +14,7 @@ import dagger.Component
 interface ActivityComponent {
 
     fun inject(activity: FindActivity)
+    fun inject(activity: FindingFalconeSolutionActivity)
 
 
 }

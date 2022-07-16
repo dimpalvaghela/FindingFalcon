@@ -10,7 +10,6 @@ import com.findingfalcone.feproblem1.FalconeApplication
 import com.findingfalcone.feproblem1.di.component.ActivityComponent
 import com.findingfalcone.feproblem1.di.component.DaggerActivityComponent
 import com.findingfalcone.feproblem1.di.module.ActivityModule
-import com.findingfalcone.feproblem1.utils.display.Toaster
 import javax.inject.Inject
 
 /**
@@ -42,22 +41,9 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity() {
             .build()
 
     protected open fun setupObservers() {
-        viewModel.messageString.observe(this, Observer {
-            it.data?.run { showMessage(this) }
-        })
-
-        viewModel.messageStringId.observe(this, Observer {
-            it.data?.run { showMessage(this) }
-        })
-
     }
 
     abstract fun showMessage(appCompatActivity: AppCompatActivity)
-
-    fun showMessage(message: String) = Toaster.show(applicationContext, message)
-
-    fun showMessage(@StringRes resId: Int) = showMessage(getString(resId))
-
 
     open fun goBack() = onBackPressed()
 
@@ -66,9 +52,6 @@ abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity() {
             supportFragmentManager.popBackStackImmediate()
         else super.onBackPressed()
     }
-
-    /* @LayoutRes
-     protected abstract fun provideLayoutId(): Int*/
 
     protected abstract fun provideLayoutView(): View
 

@@ -2,6 +2,7 @@ package com.findingfalcone.feproblem1.ui.module.FindQueenScreen
 
 import androidx.lifecycle.MutableLiveData
 import com.findingfalcone.feproblem1.data.remote.Networking
+import com.findingfalcone.feproblem1.data.remote.response.FindFalconeSolutionResponse
 import com.findingfalcone.feproblem1.data.remote.response.PlanetsApiResponse
 import com.findingfalcone.feproblem1.data.remote.response.VehicleApiResponse
 import com.findingfalcone.feproblem1.data.repository.FindingFalconeRepository
@@ -21,6 +22,7 @@ class FindViewModel(
     val isDisplayProgressDialog: MutableLiveData<Boolean> = MutableLiveData()
     var planetsList: MutableLiveData<ArrayList<PlanetsApiResponse.PlanetResponseItem>> = MutableLiveData(ArrayList())
     var vehiclesList: MutableLiveData<ArrayList<VehicleApiResponse.VehicleResponseItem>> = MutableLiveData(ArrayList())
+    var FalconeFind: MutableLiveData<FindFalconeSolutionResponse>? = MutableLiveData<FindFalconeSolutionResponse>()
 
     override fun onCreate() {
         setToken()
@@ -52,6 +54,7 @@ class FindViewModel(
                     )
             )
         } else {
+
         }
 
     }
@@ -78,6 +81,7 @@ class FindViewModel(
         } else {
         }
     }
+    fun onVehiclesList(value: ArrayList<VehicleApiResponse.VehicleResponseItem>) = vehiclesList.postValue(value)
 
     fun getQueen(planets:  List<String>, vehicles: List<String>) {
         Logger.e("Networking.API_KEY",  Networking.HEADER_AUTH_TOKEN)
@@ -89,7 +93,7 @@ class FindViewModel(
                     .subscribe(
                         {
                             isDisplayProgressDialog.postValue(false)
-                            it
+                            FalconeFind?.postValue(it)
                         },
                         {
                             isDisplayProgressDialog.postValue(false)
@@ -100,8 +104,32 @@ class FindViewModel(
         } else {
         }
     }
-    fun onVehiclesList(value: ArrayList<VehicleApiResponse.VehicleResponseItem>) = vehiclesList.postValue(value)
 
+    /*fun updatePlanetDetail(vehicleIndex: Int) {
+        val selectedPlanet = selectedPlanet!!.value
+        val selectedPlanetPosition = selectedPlanetPosition!!.value
+        selectedPlanet!!.vehicle = mVehicleList.value!![vehicleIndex]
+        mPlanetList!!.value!!.set(selectedPlanetPosition!!, selectedPlanet)
+        var timeTake: Int = 0
+        var selectedPlanetCount = 0
+        for (item in mPlanetList!!.value!!) {
+            if (item!!.vehicle != null) {
+                try {
+                    val time: Int
+                    val distance = item.distance!!
+                    val speed = item.vehicle!!.speed!!
+                    time = distance / speed
+                    timeTake += timeTake + time
+                } catch (e: NullPointerException) {
+                } catch (e: Exception) {
+
+                }
+                selectedPlanetCount++
+            }
+        }
+        if (selectedPlanetCount == 4) isFindFalconeEnable!!.postValue(true)
+        timeTaken?.postValue(timeTake)
+    }*/
 
 
 }

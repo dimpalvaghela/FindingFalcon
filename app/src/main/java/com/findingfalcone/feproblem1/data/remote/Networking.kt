@@ -16,11 +16,6 @@ import java.util.concurrent.TimeUnit
 
 object Networking {
 
-    const val HEADER_API_KEY = "x-api-key"
-    const val HEADER_AUTHORIZATION = "Token"
-    const val HEADER_ACCESS_TOKEN = "x-access-token"
-    const val HEADER_USER_ID = "x-user-id"
-
     private const val NETWORK_CALL_TIMEOUT = 60
     internal var HEADER_AUTH_TOKEN: String = getAPIToken()
 
@@ -55,24 +50,6 @@ object Networking {
                                 "Networking create api response body: ${response.body()}"
                             )
                         }
-                        /*if (response.code() in 401..403) {
-                            Log.e("LOGOUT INTERCEPTOR: ", "force logout")
-                            val baseResponse = Gson().fromJson(response.body()!!.string(), BaseResponse::class.java)
-                            ApplicationClass.activeActivity!!.runOnUiThread {
-                                AlertDialog.Builder(ApplicationClass.activeActivity!!)
-                                    .setTitle("")
-                                    .setMessage(baseResponse.error)
-                                    .setCancelable(false)
-                                    .setPositiveButton("ok") { _: DialogInterface, i: Int ->
-                                        //ApplicationClass.activeActivity!!.finishAffinity()
-                                        PrefManager.instance.token = ""
-                                        ApplicationClass.activeActivity!!.startActivity(ApplicationClass.activeActivity!!.landingPageIntent()
-                                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK))
-                                    }.show()
-                            }
-                        }else if(response.code()==409){
-                            AppUpdater.instance.open()
-                        }*/
                         response
                     }
                     .readTimeout(NETWORK_CALL_TIMEOUT.toLong(), TimeUnit.SECONDS)

@@ -3,11 +3,8 @@ package com.findingfalcone.feproblem1.di.module
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
-import androidx.room.Room
 import com.findingfalcone.feproblem1.BuildConfig
 import com.findingfalcone.feproblem1.FalconeApplication
-import com.findingfalcone.feproblem1.data.local.db.DatabaseConstant
-import com.findingfalcone.feproblem1.data.local.db.DatabaseService
 import com.findingfalcone.feproblem1.data.remote.NetworkService
 import com.findingfalcone.feproblem1.data.remote.Networking
 import com.findingfalcone.feproblem1.di.ApplicationContext
@@ -48,16 +45,6 @@ class ApplicationModule(private val application: FalconeApplication) {
     fun provideSharedPreferences(): SharedPreferences =
         application.getSharedPreferences(Constants.PREFS_NAME, Context.MODE_PRIVATE)
 
-    /**
-     * We need to write @Singleton on the provide method if we are create the instance inside this method
-     * to make it singleton. Even if we have written @Singleton on the instance's class
-     */
-    @Provides
-    @Singleton
-    fun provideDatabaseService(): DatabaseService =
-        Room.databaseBuilder(application, DatabaseService::class.java, DatabaseConstant.DB_NAME)
-            .allowMainThreadQueries()
-            .build()
     @Provides
     @Singleton
     fun provideNetworkService(): NetworkService =

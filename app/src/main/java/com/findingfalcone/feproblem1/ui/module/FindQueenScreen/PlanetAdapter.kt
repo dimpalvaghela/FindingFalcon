@@ -2,6 +2,7 @@ package com.findingfalcone.feproblem1.ui.module.FindQueenScreen
 
 import android.app.Activity
 import android.content.Context
+import android.graphics.Color
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
@@ -52,20 +53,21 @@ class PlanetAdapter(
           val cityAutoCompleteView = convertView!!.findViewById<View>(R.id.autoCompleteTextView) as TextView
           cityAutoCompleteView.text = planetsApi.name;
 
+          if (planetsApi.isSelected){
+             cityAutoCompleteView.text = "DDDDD"
+          }
+
       } catch (e: Exception) {
           e.printStackTrace()
       }
       return convertView!!
   }
 
-
-
     override fun getFilter(): Filter {
         return object : Filter() {
             override fun convertResultToString(resultValue: Any): String {
                 return (resultValue as PlanetsApiResponse.PlanetResponseItem).name
             }
-
             override fun performFiltering(constraint: CharSequence?): FilterResults {
                 val filterResults = FilterResults()
                 if (constraint != null) {
@@ -75,8 +77,7 @@ class PlanetAdapter(
                         if (mPlanet.name.lowercase(Locale.getDefault()).startsWith(
                                 constraint.toString()
                                     .lowercase(Locale.getDefault())
-                            )
-                        ) {
+                            )) {
                             mPlanetsApiSuggestion.add(mPlanet)
                         }
                     }

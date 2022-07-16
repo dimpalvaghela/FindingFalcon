@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="_0mdp">0.00dp</dimen>
+    <dimen name="_3mdp">3.00dp</dimen>
     <dimen name="_5mdp">5.00dp</dimen>
     <dimen name="_7mdp">7.00dp</dimen>
     <dimen name="_10mdp">10.00dp</dimen>
@@ -21,5 +23,7 @@
     <dimen name="bottomButtonWidth">@dimen/_140mdp</dimen>
 
     <dimen name="_8font_mdp">12.00sp</dimen>
+    <dimen name="_24">24</dimen>
+
 
 </resources>

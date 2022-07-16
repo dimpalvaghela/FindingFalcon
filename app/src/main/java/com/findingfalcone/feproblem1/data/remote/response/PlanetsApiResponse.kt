@@ -8,6 +8,8 @@ class PlanetsApiResponse : ArrayList<PlanetsApiResponse.PlanetResponseItem>(){
         @SerializedName("distance")
         val distance: Int,
         @SerializedName("name")
-        val name: String
+        val name: String,
+        var isSelected: Boolean
+
     )
 }

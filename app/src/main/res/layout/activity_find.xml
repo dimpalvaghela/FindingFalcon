@@ -1,182 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/_20mdp"
-    android:background="@color/white"
-    android:orientation="vertical"
     tools:context=".ui.module.FindQueenScreen.FindActivity">
 
-    <TextView
-        style="@style/textStyleTitle"
-        android:text="@string/app_name" />
-
-    <TextView
-        style="@style/textStyleSubTitle"
-        android:text="@string/str_select_planet_you_want_to_search_in" />
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <AutoCompleteTextView
-            android:id="@+id/sprDestinationOne"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="@string/_weight_one"
-            android:inputType="none"
-            android:text="@string/planet_destination_one" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <androidx.appcompat.widget.LinearLayoutCompat style="@style/mainStyle">
 
+            <TextView
+                style="@style/textStyleTitle"
+                android:text="@string/app_name" />
 
-    <LinearLayout
-        android:id="@+id/lnrVehicleSelectionOne"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5mdp"
-        android:layout_marginBottom="@dimen/_5mdp"
-        android:orientation="horizontal"
-        android:background="@drawable/lnr_layout_bg"
-        >
-
-        <ImageView
-            android:id="@+id/ivVehicleSelectionOne"
-            style="@style/iconStyleCommon" />
-
-        <TextView
-            android:id="@+id/txtSelectSpaceOne"
-            style="@style/textStyleCommon"
-            android:layout_weight="@string/_weight_one"
-            android:text="@string/str_select_vehicle" />
-    </LinearLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-       >
-
-        <AutoCompleteTextView
-            android:id="@+id/sprDestinationTwo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="@string/_weight_one"
-            android:inputType="none"
-            android:text="@string/planet_destination_two" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                style="@style/textStyleSubTitle"
+                android:text="@string/str_select_planet_you_want_to_search_in" />
 
 
-    <LinearLayout
-        android:id="@+id/lnrVehicleSelectionTwo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5mdp"
-        android:layout_marginBottom="@dimen/_5mdp"
-        android:orientation="horizontal"
-        android:background="@drawable/lnr_layout_bg"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        >
-
-        <ImageView
-            android:id="@+id/ivVehicleSelectionTwo"
-            style="@style/iconStyleCommon" />
-
-        <TextView
-            android:id="@+id/txtVehicleSelectionTwo"
-            style="@style/textStyleCommon"
-            android:layout_weight="@string/_weight_one"
-            android:text="@string/str_select_vehicle" />
-    </LinearLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <AutoCompleteTextView
-            android:id="@+id/sprDestinationThree"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="@string/_weight_one"
-            android:inputType="none"
-            android:text="@string/planet_destination_three" />
-    </com.google.android.material.textfield.TextInputLayout>
+                <AutoCompleteTextView
+                    android:id="@+id/sprDestinationOne"
+                    style="@style/spinnerStyle"
+                    android:text="@string/planet_destination_one" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-    <LinearLayout
-        android:id="@+id/lnrVehicleSelectionThree"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5mdp"
-        android:layout_marginBottom="@dimen/_5mdp"
-        android:orientation="horizontal"
-        android:background="@drawable/lnr_layout_bg"
+            <LinearLayout
+                android:id="@+id/lnrVehicleSelectionOne"
+                style="@style/lnrFindFalconeStyle">
 
-        >
+                <ImageView
+                    android:id="@+id/ivVehicleSelectionOne"
+                    style="@style/iconStyleCommon" />
 
-        <ImageView
-            android:id="@+id/ivVehicleSelectionThree"
-            style="@style/iconStyleCommon" />
+                <TextView
+                    android:id="@+id/txtSelectSpaceOne"
+                    style="@style/textStyleCommon"
+                    android:layout_weight="@string/_weight_one"
+                    android:text="@string/str_select_vehicle_one" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/txtVehicleSelectionThree"
-            style="@style/textStyleCommon"
-            android:layout_weight="@string/_weight_one"
-            android:text="@string/str_select_vehicle" />
-    </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <AutoCompleteTextView
-            android:id="@+id/sprDestinationFour"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="@string/_weight_one"
-            android:inputType="none"
-            android:text="@string/planet_destination_four" />
-    </com.google.android.material.textfield.TextInputLayout>
+                <AutoCompleteTextView
+                    android:id="@+id/sprDestinationTwo"
+                    style="@style/spinnerStyle"
+                    android:text="@string/planet_destination_two" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-    <LinearLayout
-        android:id="@+id/lnrVehicleSelectionFour"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5mdp"
-        android:layout_marginBottom="@dimen/_5mdp"
-        android:orientation="horizontal"
-        android:background="@drawable/lnr_layout_bg">
+            <LinearLayout
+                android:id="@+id/lnrVehicleSelectionTwo"
+                style="@style/lnrFindFalconeStyle">
 
-        <ImageView
-            android:id="@+id/ivVehicleSelectionFour"
-            style="@style/iconStyleCommon" />
+                <ImageView
+                    android:id="@+id/ivVehicleSelectionTwo"
+                    style="@style/iconStyleCommon" />
 
-        <TextView
-            android:id="@+id/txtVehicleSelectionFour"
-            style="@style/textStyleCommon"
-            android:layout_weight="@string/_weight_one"
-            android:text="@string/str_select_vehicle" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/txtVehicleSelectionTwo"
+                    style="@style/textStyleCommon"
+                    android:layout_weight="@string/_weight_one"
+                    android:text="@string/str_select_vehicle_two" />
+            </LinearLayout>
 
-    <TextView
-        style="@style/textStyleSubTitle"
-        android:text="@string/str_time_taken" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnFindFalcon"
-        style="@style/settingsBottomButton"
-        android:text="@string/str_find_falcone"
-       />
+                <AutoCompleteTextView
+                    android:id="@+id/sprDestinationThree"
+                    style="@style/spinnerStyle"
+                    android:text="@string/planet_destination_three" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lnrVehicleSelectionThree"
+                style="@style/lnrFindFalconeStyle">
+
+                <ImageView
+                    android:id="@+id/ivVehicleSelectionThree"
+                    style="@style/iconStyleCommon" />
+
+                <TextView
+                    android:id="@+id/txtVehicleSelectionThree"
+                    style="@style/textStyleCommon"
+                    android:layout_weight="@string/_weight_one"
+                    android:text="@string/str_select_vehicle_three" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sprDestinationFour"
+                    style="@style/spinnerStyle"
+                    android:text="@string/planet_destination_four" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lnrVehicleSelectionFour"
+                style="@style/lnrFindFalconeStyle">
+
+                <ImageView
+                    android:id="@+id/ivVehicleSelectionFour"
+                    style="@style/iconStyleCommon" />
+
+                <TextView
+                    android:id="@+id/txtVehicleSelectionFour"
+                    style="@style/textStyleCommon"
+                    android:layout_weight="@string/_weight_one"
+                    android:text="@string/str_select_vehicle_four" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/textStyleSubTitle"
+                android:text="@string/str_time_taken" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFindFalcon"
+                style="@style/settingsBottomButton"
+                android:text="@string/str_find_falcone" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
 </LinearLayout>
